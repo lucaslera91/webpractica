@@ -1,0 +1,26 @@
+body{
+    background-image: url('164f2351d37aec3f57789fc342f585d3.jpg');
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2%;
+    
+
+}
+.logo{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 100px;
+
+}
+.logo img{
+    
+    width: 100%;
+    height: auto;
+    }
+.header{
+    padding-left: 10%;
+    color: white;
+    text-align: center;
+}
