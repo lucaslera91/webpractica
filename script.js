@@ -59,7 +59,7 @@ function validarTodo(min, max) {
 var check2 = check >1;
 alert(check);*/
 var numeroSecreto = generarNumeroAleatorio(min, max);
-alert(numeroSecreto);
+/*alert(numeroSecreto);*/
 var verificador = 0;
 var incorrecto = 0;
 do {
