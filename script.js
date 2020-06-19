@@ -1,7 +1,8 @@
 var numeroIngresado;
 var max = 10;
 var min = 0;
-
+alert("Jugaremos un Juego - Deberas adivinar el numero escondido");
+alert("Estas preparado, tienes 3 intentos!");
 function generarNumeroAleatorio(minimo, maximo) {
     return Math.floor(minimo + (maximo - minimo) * Math.random());
 }
