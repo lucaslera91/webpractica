@@ -27,3 +27,7 @@ body{
 #msj{
     font-size: 50px;
 }
+#nombre{
+    font-size: 35px;
+    text-decoration: underline;
+}
