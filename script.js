@@ -90,4 +90,4 @@ localStorage.setItem("name",prompt("Tell me your name").toUpperCase());
 nombre = document.getElementById("nombre");
 nombre.innerHTML = localStorage.getItem("name");
 
-document.getElementById("msj").innerHTML = prompt("Say something nice!, i think caps dont work").toUpperCase();
+document.getElementById("msj").innerHTML = prompt("Say something nice!").toUpperCase();
