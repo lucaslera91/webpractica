@@ -86,4 +86,4 @@ if (verificador == 0 ) {
 
 let msj;
 msj = document.getElementById("msj");
-msj.innerHTML = prompt("Say something nice!");
+msj.innerHTML = prompt("Say something nice!").toUpperCase();
