@@ -78,7 +78,7 @@ do {
 
 } while (verificador == 0 && incorrecto < 3);
 if (verificador == 0 ) {
-    alert(" JA - PERDISTE");
+    document.write(" JA - PERDISTE");
 }
 }else{
     alert("Enjoy the view!");
@@ -86,4 +86,4 @@ if (verificador == 0 ) {
 
 let msj;
 msj = document.getElementById("msj");
-msj.innerHTML = prompt("Say something nice!").toUpperCase();
+msj.innerHTML = prompt("Say something nice!, i think caps dont work").toUpperCase();
