@@ -83,3 +83,7 @@ if (verificador == 0 ) {
 }else{
     alert("Enjoy the view!");
 }
+
+let msj;
+msj = document.getElementById("msj");
+msj.innerHTML = prompt("Say something nice!");
