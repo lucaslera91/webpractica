@@ -2,7 +2,7 @@ var numeroIngresado;
 var max = 10;
 var min = 0;
 let play = prompt("Quieres Jugar?").toUpperCase();
-if(pay != "NO"){
+if(play != "NO"){
 
 alert("Jugaremos un Juego - Deberas adivinar el numero escondido esta escondido entre " + min + " y " + max);
 alert("Estas preparado, tienes 3 intentos!");
