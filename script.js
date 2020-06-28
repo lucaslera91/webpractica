@@ -1,6 +1,9 @@
 var numeroIngresado;
 var max = 10;
 var min = 0;
+let play = prompt("Quieres Jugar?");
+if(pay != "NO"){
+
 alert("Jugaremos un Juego - Deberas adivinar el numero escondido esta escondido entre " + min + " y " + max);
 alert("Estas preparado, tienes 3 intentos!");
 function generarNumeroAleatorio(minimo, maximo) {
@@ -15,12 +18,7 @@ function validadorRango(min, max, ingreso) {
     return test;
 }
 function validarTodo(min, max) {
-    /*var testNum = Number.isFinite(ingreso);
-    alert(testNum);
-    var testRango = ingreso>= min && ingreso<=max;
-    alert(testRango);
-    testTotal = testNum && testRango;
-    alert(testTotal);*/
+    
     var ingreso;
     let testRango = 0;
     let testTotal = 0;
@@ -32,9 +30,7 @@ function validarTodo(min, max) {
             alert("Error en ingreso")
         }
         ingreso = parseInt(prompt("Elija un numero entre " + min + " y " + max));
-        /*testNum = Number.isFinite(ingreso); // true
-        alert(testNum);*/
-
+      
         testNum2 = isNaN(ingreso); // false
         /*alert(testNum2);*/
         if (testNum2 == true) {
@@ -83,4 +79,7 @@ do {
 } while (verificador == 0 && incorrecto < 3);
 if (verificador == 0 ) {
     alert(" JA - PERDISTE");
+}
+}else{
+    alert("Enjoy the view!");
 }
