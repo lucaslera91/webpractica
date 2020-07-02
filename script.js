@@ -1,9 +1,15 @@
 var numeroIngresado;
 var max = 10;
 var min = 0;
-let play = prompt("Quieres Jugar? (si o no)").toUpperCase();
-if(play != "NO"){
+//let play = prompt("Quieres Jugar? (si o no)").toUpperCase();
 
+let apretame = document.getElementById("boton1");
+let adivina = document.getElementById("guess");
+
+apretame.addEventListener("click", juego);
+
+
+function juego(){
 alert("Jugaremos un Juego - Deberas adivinar el numero escondido esta escondido entre " + min + " y " + max);
 alert("Estas preparado, tienes 3 intentos!");
 function generarNumeroAleatorio(minimo, maximo) {
@@ -78,16 +84,6 @@ do {
 
 } while (verificador == 0 && incorrecto < 3);
 if (verificador == 0 ) {
-    document.write(" JA - PERDISTE");
+    alert("ja perdiste");
 }
-}else{
-    alert("Enjoy the view!");
 }
-
-let msj;
-let nombre;
-localStorage.setItem("name",prompt("Tell me your name").toUpperCase());
-nombre = document.getElementById("nombre");
-nombre.innerHTML = localStorage.getItem("name");
-
-document.getElementById("msj").innerHTML = prompt("Say something nice!").toUpperCase();
