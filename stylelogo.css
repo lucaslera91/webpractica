@@ -37,14 +37,19 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    align-content: center;
+    height: 50vh;
 }
 #guess{
     margin: 7vh;
     text-align: center;
     font-size: 3vh;
+    display: none;
 }
 .boton{
-    
+
+    font-size: 3vh;
     height: 30vh;
     width: 30vh;
     border-radius: 50%;
