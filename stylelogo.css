@@ -48,10 +48,13 @@ header{
     display: none;
 }
 .boton{
-
+    background-position: top;
+    background-image: url(https://images.newscientist.com/wp-content/uploads/2015/11/dn28487-1_800.jpg?width=800);
     font-size: 3vh;
     height: 30vh;
     width: 30vh;
     border-radius: 50%;
+    object-fit: cover;
+
     
 }
