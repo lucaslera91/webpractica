@@ -1,11 +1,13 @@
 body{
     background-image: url('164f2351d37aec3f57789fc342f585d3.jpg');
+
+}
+header{
     display: flex;
     justify-content: flex-start;
     align-items: center;
     padding: 2%;
-    
-
+   
 }
 .logo{
     display: flex;
@@ -30,4 +32,21 @@ body{
 #nombre{
     font-size: 35px;
     text-decoration: underline;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#guess{
+    margin: 7vh;
+    text-align: center;
+    font-size: 3vh;
+}
+.boton{
+    
+    height: 30vh;
+    width: 30vh;
+    border-radius: 50%;
+    
 }
