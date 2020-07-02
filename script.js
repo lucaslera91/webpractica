@@ -2,6 +2,9 @@ var numeroIngresado;
 var max = 10;
 var min = 0;
 //let play = prompt("Quieres Jugar? (si o no)").toUpperCase();
+window.onload.function = function secretNumber(){
+    return Math.floor(minimo + (maximo - minimo) * Math.random());
+}
 
 let apretame = document.getElementById("botonEncender");
 let adivina = document.getElementById("guess");

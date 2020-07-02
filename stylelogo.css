@@ -55,6 +55,18 @@ header{
     width: 30vh;
     border-radius: 50%;
     object-fit: cover;
-
     
+}
+.number{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    height: 50vh;
+    width:auto;
+}
+.botonNumero{
+    width: 15vh;
+    padding: 2vh;
+    font-size: 3vh;
 }
