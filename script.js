@@ -11,11 +11,24 @@ function secretNumber(){
 window.onload = function secretNumber(){}
 
 let numSecreto = secretNumber();
-alert(numSecreto);
+//alert(numSecreto);
 
-
+//let rem = document.getElementsById("1");
 
 let apretame = document.getElementById("botonEncender");
+let hide = document.getElementById("number1");
+let rem = document.getElementById("form12");
+
+
+apretame.addEventListener("click", play);
+
+function play(){
+    alert("Debes intentar adivinar el numero secreto del 0 al 9. Tienes 3 intentos");
+    rem.remove();
+    hide.className = "";
+
+}
+
 let adivina = document.getElementById("guess");
 
 
@@ -190,13 +203,14 @@ function ganadora(){
 function tryies(){
 
      val = val + 1;
-    alert("intentos " + val);
+    
     if(val>100){
         alert("GANASTE!")
     }else if(val>=3){
         alert("perdiste");
     }else{
-        alert("volve a intentar");
+        alert("intento " + val + " volve a intentar");
+       
     }
     return val;
 }
