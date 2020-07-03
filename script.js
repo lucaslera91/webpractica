@@ -25,7 +25,7 @@ apretame.addEventListener("click", play);
 function play(){
     alert("Debes intentar adivinar el numero secreto del 0 al 9. Tienes 3 intentos");
     rem.remove();
-    hide.className = "";
+    hide.style.display = "flex";
 
 }
 

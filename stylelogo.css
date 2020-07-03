@@ -66,10 +66,9 @@ header{
     flex-wrap: wrap;
     height: 50vh;
     width:auto;
-}
-.hide{
     display: none;
 }
+
 .botonNumero{
     
     width: 15vh;
