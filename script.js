@@ -1,27 +1,41 @@
 var numeroIngresado;
 var max = 10;
 var min = 0;
-//let play = prompt("Quieres Jugar? (si o no)").toUpperCase();
-window.onload.function = function secretNumber(){
-    return Math.floor(minimo + (maximo - minimo) * Math.random());
+let pick;
+let verificador;
+function secretNumber(){
+    return Math.floor(min + (max - min) * Math.random());
 }
+//let play = prompt("Quieres Jugar? (si o no)").toUpperCase();
+window.onload = function secretNumber(){}
+
+let numSecreto = secretNumber();
+alert(numSecreto);
+
+
 
 let apretame = document.getElementById("botonEncender");
 let adivina = document.getElementById("guess");
-let guess1 = document.getElementsById("boton0");
-let guess2 = document.getElementsById("boton1");
-let guess3 = document.getElementsById("boton2");
-let guess4 = document.getElementsById("boton3");
-let guess5 = document.getElementsById("boton4");
-let guess6 = document.getElementsById("boton5");
-let guess7 = document.getElementsById("boton6");
-let guess8 = document.getElementsById("boton7");
-let guess9 = document.getElementsById("boton8");
-let guess0 = document.getElementsById("boton9");
 
+
+let boton0 = document.getElementById("boton0");
+
+
+
+let boton1 = document.getElementById("boton1");
+let boton2 = document.getElementById("boton2");
+let boton3 = document.getElementById("boton3");
+let boton4 = document.getElementById("boton4");
+let boton5 = document.getElementById("boton5");
+let boton6 = document.getElementById("boton6");
+let boton8 = document.getElementById("boton8");
+let boton9 = document.getElementById("boton9");
+
+alert(parseInt(boton0.innerText));
 
 apretame.addEventListener("click", juego);
 boton0.addEventListener("click", numero0);
+
 boton1.addEventListener("click", numero1);
 boton2.addEventListener("click", numero2);
 boton3.addEventListener("click", numero3);
@@ -32,15 +46,28 @@ boton7.addEventListener("click", numero7);
 boton8.addEventListener("click", numero8);
 boton9.addEventListener("click", numero9);
 
+let guess = [];
+
 function numero0() {
-    let pick = 0;
+    let numeroIngresado = parseInt(boton0.innerText);
+    debugger;
+    if (numeroIngresado > numeroSecreto) {
+        alert("El numero elegido es mayor al secreto");
+        //verificador = 0;
+    } else if (numeroIngresado < numeroSecreto) {
+        alert("Numero ingresado es menor al secreto");
+        //verificador = 0;
+    } else if (numeroIngresado = numeroSecreto) {
+        //alert("GANASTE!");
+        verificador = 1;
+    }
     return pick;
 }
+alert(pick);
 function numero1() {
     let pick = 1;
     return pick;
 }
-
 function numero2() {
     let pick = 2;
     return pick;
@@ -66,6 +93,61 @@ function numero2() {
     let pick = 9;
     return pick;
 }
+let guess = pick;
+
+function verificar(guess){
+    let numeroIngresado = guess;
+    if (numeroIngresado > numeroSecreto) {
+        alert("El numero elegido es mayor al secreto");
+        verificador = 1;
+    } else if (numeroIngresado < numeroSecreto) {
+        alert("Numero ingresado es menor al secreto");
+        verificador = 1;
+    } else if (numeroIngresado = numeroSecreto) {
+        alert("GANASTE!");
+        verificador = 5;
+    }
+    if(verificador > 3){
+        alert("Ganaste");
+    }else if(verificador == 3){
+        alert("Perdiste");
+    }else{
+        alert("Try again");
+    }
+    return verificador;
+}
+
+verificador
+
+
+
+
+
+do {
+    alert("llevas " + incorrecto + " intentos");
+
+    //numeroIngresado = validarTodo(min, max);
+    incorrecto++;
+
+    if (numeroIngresado > numeroSecreto) {
+        alert("El numero elegido es mayor al secreto");
+        verificador = 0;
+    } else if (numeroIngresado < numeroSecreto) {
+        alert("Numero ingresado es menor al secreto");
+        verificador = 0;
+    } else if (numeroIngresado = numeroSecreto) {
+        alert("GANASTE!");
+        verificador = 1;
+    }
+
+
+
+} while (verificador == 0 && incorrecto < 3);
+if (verificador == 0) {
+    alert("ja perdiste");
+}
+
+
 
 function juego() {
     alert("Jugaremos un Juego - Deberas adivinar el numero escondido esta escondido entre " + min + " y " + max);
