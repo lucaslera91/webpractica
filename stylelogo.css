@@ -71,6 +71,7 @@ header{
     flex-wrap: wrap;
     height: 50vh;
     width:auto;
+    display: none;
     
 }
 
@@ -81,6 +82,8 @@ header{
     font-size: 3vh;
     border: 2px darkblue;
     border-radius: 50%;
+    outline: none;
+    border: none;
 }
 #boton1{
    
@@ -125,8 +128,35 @@ header{
     margin: 10px;
     
 }
-button:active {
+.boton:active {
     outline: none;
     border: none;
 }
+.botonNumero:active{
+    outline: none;
+    border: none;
+    background-color: darkblue;
+}
 
+.divNewGame{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#playAgain{
+    width: 20vh;
+    height: 20vh;
+    border-radius: 50%;
+    background-color: darkslategrey;
+    outline: none;
+    border: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    display: none;
+    
+
+}

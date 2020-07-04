@@ -4,13 +4,19 @@ var min = 0;
 let pick;
 let val = 0;
 let verificador;
+let numSecreto;
+secretNumber();
 function secretNumber(){
-    return Math.floor(min + (max - min) * Math.random());
+
+numSecreto = Math.floor(min + (max - min) * Math.random());
+
+
+    return numSecreto;
 }
+
 //let play = prompt("Quieres Jugar? (si o no)").toUpperCase();
 window.onload = function secretNumber(){}
-
-let numSecreto = secretNumber();
+debugger;
 //alert(numSecreto);
 
 //let rem = document.getElementsById("1");
@@ -18,13 +24,33 @@ let numSecreto = secretNumber();
 let apretame = document.getElementById("botonEncender");
 let hide = document.getElementById("number1");
 let rem = document.getElementById("form12");
+let playAgain = document.getElementById("playAgain");
 
+playAgain.addEventListener("click", secretNumber);
+playAgain.addEventListener("click", reset);
+
+function reset(){
+    apretame.style.display = "flex";
+    hide.style.display = "flex";
+playAgain.style.display = "none";
+val = 0;
+}
+
+function endGame(){
+    rem.style.display = "none";
+    hide.style.display = "none";
+playAgain.style.display = "flex";
+
+
+}
 
 apretame.addEventListener("click", play);
 
 function play(){
     alert("Debes intentar adivinar el numero secreto del 0 al 9. Tienes 3 intentos");
-    rem.remove();
+    //rem.remove();
+    rem.style.display = "none";
+    
     hide.style.display = "flex";
 
 }
@@ -198,6 +224,7 @@ function numero9() {
 
 function ganadora(){
     alert("GANASTE");
+    endGame();
 }
 
 function tryies(){
@@ -207,6 +234,7 @@ function tryies(){
     if(val>100){
         alert("GANASTE!")
     }else if(val>=3){
+        endGame();
         alert("perdiste");
     }else{
         alert("intento " + val + " volve a intentar");
