@@ -55,6 +55,11 @@ header{
     width: 30vh;
     border-radius: 50%;
     object-fit: cover;
+    color: darkblue;
+    font-weight: 600;
+    border: 2px darkblue;
+
+
     
 }
 #number1{
@@ -66,12 +71,62 @@ header{
     flex-wrap: wrap;
     height: 50vh;
     width:auto;
-    display: none;
+    
 }
 
 .botonNumero{
-    
-    width: 15vh;
+    height: 10vh;
+    width: 10vh;
     padding: 2vh;
     font-size: 3vh;
+    border: 2px darkblue;
+    border-radius: 50%;
 }
+#boton1{
+   
+    margin: 5px;
+    
+
+}
+#boton2{
+    margin: 5px;
+
+    
+}
+#boton3{
+    margin: 5px;
+    
+}
+#boton4{
+    margin: 5px;
+    
+}
+#boton5{
+    margin: 5px;
+    
+}
+#boton6{
+    margin: 5px;
+    
+}
+#boton7{
+    margin: 5px;
+    
+}
+#boton8{
+    margin: 5px;
+    
+}
+#boton9{
+    margin: 5px;
+    
+}
+#boton0{
+    margin: 5px;
+    
+}
+button:active {
+    outline: none;
+    border: none;
+}
+
