@@ -66,10 +66,10 @@ header{
     display: flex;
     align-items: center;
     align-content: center;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
     height: 50vh;
-    width:45vw;
+    width: 100%;
     display: none;
     
 }
