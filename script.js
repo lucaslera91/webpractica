@@ -45,8 +45,10 @@ function historialesOff(){
     historial.innerHTML = "Historial";
 }
 function historiales(){
+
+    let aban = jugado - ganado - perdido;
     
-    historial.innerHTML = "Jugados: "+ jugado + " - Ganados: " + ganado + " - Perdidos: " + perdido;
+    historial.innerHTML = "Ingresado: "+ jugado + " - Ganados: " + ganado + " - Perdidos: " + perdido + " - Abandonados: " + aban;
    
 }
 
@@ -80,14 +82,20 @@ playAgain.addEventListener("click", reset);
 
 function reset(){
     apretame.style.display = "flex";
+    apretame.style.opacity = 1;
     hide.style.display = "flex";
+    hide.style.opacity = 1;
     playAgain.style.display = "none";
+    playAgain.style.opacity = 0;
     val = 0;
 }
 
 function endGame(){
     rem.style.display = "none";
+    rem.style.opacity = 0;
     hide.style.display = "none";
+    hide.style.opacity= 0;
+
 playAgain.style.display = "flex";
 
 
