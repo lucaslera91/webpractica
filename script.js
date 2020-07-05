@@ -5,17 +5,66 @@ let pick;
 let val = 0;
 let verificador;
 let numSecreto;
-secretNumber();
-function secretNumber(){
 
+let jugado;
+let ganado;
+let perdido;
+
+jugado = parseInt(localStorage.getItem("Jugado"));
+
+ganado = parseInt(localStorage.getItem("Ganado"));
+
+perdido = parseInt(localStorage.getItem("Perdido"));
+
+
+if (jugado == null || typeof jugado === "undefined" || isNaN(jugado)){
+    jugado = parseInt(localStorage.getItem("Jugado"));
+localStorage.setItem("Jugado",0);
+jugado = parseInt(localStorage.getItem("Jugado"));
+
+}
+
+if(ganado == null || typeof ganado === "undefined" || isNaN(ganado)){
+ganado = parseInt(localStorage.getItem("Ganado"));
+localStorage.setItem("Ganado",0);
+ganado = parseInt(localStorage.getItem("Ganado"));
+}
+if(perdido == null || typeof perdido === "undefined" || isNaN(perdido)){
+    perdido = parseInt(localStorage.getItem("Perdido"));
+    localStorage.setItem("Perdido",0);
+    perdido = parseInt(localStorage.getItem("Perdido"));
+    }
+
+//alert("Jugados: "+ jugado + " - Ganados: " + ganado + " - Perdidos: " + perdido);
+
+let historial = document.getElementById("historia");
+historial.addEventListener("mouseover", historiales);
+historial.addEventListener("mouseout", historialesOff);
+
+function historialesOff(){
+    historial.innerHTML = "Historial";
+}
+function historiales(){
+    
+    historial.innerHTML = "Jugados: "+ jugado + " - Ganados: " + ganado + " - Perdidos: " + perdido;
+   
+}
+
+//storage.clear();
+
+function secretNumber(){
 numSecreto = Math.floor(min + (max - min) * Math.random());
 
-
+played();
     return numSecreto;
+}
+function played(){
+    jugado = jugado + 1;
+    localStorage.setItem("Jugado", jugado);
 }
 
 //let play = prompt("Quieres Jugar? (si o no)").toUpperCase();
-window.onload = function secretNumber(){}
+//window.onload = function secretNumber(){}
 debugger;
 //alert(numSecreto);
 
@@ -32,8 +81,8 @@ playAgain.addEventListener("click", reset);
 function reset(){
     apretame.style.display = "flex";
     hide.style.display = "flex";
-playAgain.style.display = "none";
-val = 0;
+    playAgain.style.display = "none";
+    val = 0;
 }
 
 function endGame(){
@@ -49,8 +98,8 @@ apretame.addEventListener("click", play);
 function play(){
     alert("Debes intentar adivinar el numero secreto del 0 al 9. Tienes 3 intentos");
     //rem.remove();
+    secretNumber();
     rem.style.display = "none";
-    
     hide.style.display = "flex";
 
 }
@@ -225,16 +274,18 @@ function numero9() {
 function ganadora(){
     alert("GANASTE");
     endGame();
+    ganado = ganado + 1;
+    localStorage.setItem("Ganado", ganado);
+
 }
 
 function tryies(){
 
      val = val + 1;
-    
-    if(val>100){
-        alert("GANASTE!")
-    }else if(val>=3){
+    if(val>=3){
         endGame();
+        perdido = perdido + 1;
+localStorage.setItem("Perdido", perdido);
         alert("perdiste");
     }else{
         alert("intento " + val + " volve a intentar");
